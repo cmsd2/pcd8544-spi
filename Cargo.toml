@@ -1,0 +1,13 @@
+[package]
+name = "pcd8544-spi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bitfield-struct = "0.8.0"
+embedded-graphics = { version = "0.8.1", optional = true }
+embedded-hal = "1.0.0"
+snafu = { version = "0.8.4", default-features = false, features = ["rust_1_65"] }
+
+[features]
+graphics = ["dep:embedded-graphics"]
